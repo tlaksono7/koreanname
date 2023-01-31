@@ -1,5 +1,8 @@
 let generateEl = document.querySelector("#generate")
+let resetEl = document.querySelector("#reset")
+let resultSecEl = document.querySelector(".result-section")
 let resultEl = document.querySelector("#result")
+let headerResultEl = document.querySelector("#result-header")
 let valueDate = document.querySelector("#date")
 let valueMonth = document.querySelector("#month")
 let sexMale = document.querySelector("#male")
@@ -119,15 +122,20 @@ const getLastName = function() {
     }
 }
 
+resetEl.addEventListener("click", function() {
+    window.location.href=window.location.href
+});
+
 generateEl.addEventListener("click", function() {
     validateSex()
     if (objName) {
         getFirstName()
         getLastName()
-        resultEl.textContent = lastName+ " "+firstName
+        resultSecEl.classList.add("open")
+        headerResultEl.textContent = "Your Korean name is:"
+        resultEl.textContent = "✨ "+lastName+ " "+firstName+" ✨"
     } else {
         return
     }
    
-    
 });

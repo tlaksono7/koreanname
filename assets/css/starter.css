@@ -7778,7 +7778,7 @@ img {
   height: auto; }
 
 body {
-  background-color: #eeeeee;
+  background-color: #196b5b;
   font-family: 'Poppins', sans-serif;
   color: #333333; }
 
@@ -7788,16 +7788,23 @@ body {
   margin: 0 auto; }
 
 .content {
-  margin-top: 50px;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px; }
+  margin-top: 25px;
+  padding: 20px; }
+
+.header {
+  margin-bottom: 40px;
+  color: #ffffff; }
 
 .sex {
-  margin: 20px 0; }
+  background-color: #269c85;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px; }
+  .sex p {
+    margin-bottom: 20px;
+    color: #ffffff; }
   .sex .radio-toolbar {
-    display: flex;
-    margin-top: 10px; }
+    display: flex; }
   .sex .radio-toolbar input[type="radio"] {
     display: none; }
   .sex .radio-toolbar label {
@@ -7806,48 +7813,84 @@ body {
     align-items: center;
     border-radius: 10px;
     padding: 10px;
-    font-family: Arial;
     font-size: 16px;
     margin-right: 10px;
     cursor: pointer; }
     .sex .radio-toolbar label i {
-      width: 20px;
-      height: 20px;
+      width: 30px;
+      height: 30px;
       display: flex;
       justify-content: center;
-      align-items: center; }
-  .sex .radio-toolbar label.male {
-    border: 2px solid #60b6fd; }
-  .sex .radio-toolbar label.female {
-    border: 2px solid #fd6094; }
-  .sex .radio-toolbar input[type="radio"]:checked + .male {
-    background-color: #60b6fd; }
-  .sex .radio-toolbar input[type="radio"]:checked + .female {
-    background-color: #fd6094; }
+      align-items: center;
+      color: #ffffff;
+      font-size: 20px; }
+  .sex .radio-toolbar label {
+    border: 2px solid #ffffff; }
+  .sex .radio-toolbar input[type="radio"]:checked + label {
+    background-color: #ffffff; }
+    .sex .radio-toolbar input[type="radio"]:checked + label i {
+      color: #196b5b; }
 
 .birthday {
-  margin: 20px 0; }
+  background-color: #269c85;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px; }
+  .birthday p {
+    color: #ffffff; }
   .birthday .birthday-wrapper {
+    display: flex;
+    flex-direction: column;
     margin-top: 10px; }
   .birthday select {
     background-color: #ffffff;
     padding: 10px 20px;
-    border: 1px solid #eeeeee;
-    border-radius: 10px; }
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    color: #196b5b;
+    margin-bottom: 10px; }
 
-#result {
-  margin: 20px 0;
+.action {
+  margin-bottom: 20px;
+  text-align: right; }
+
+.result-section {
+  display: none; }
+
+.result-section.open {
+  display: block;
+  background-color: #ffffff;
+  text-align: center;
   padding: 20px;
-  background-color: #b1fde4;
+  margin-bottom: 20px;
   border-radius: 10px; }
+  .result-section.open #result-header {
+    margin-bottom: 10px; }
+  .result-section.open #result {
+    font-size: 20px;
+    font-weight: 600; }
 
-button {
+.btn {
   padding: 10px 20px;
-  background-color: #1ABC9C;
-  border: 1px solid #1ABC9C;
+  border-radius: 10px;
+  cursor: pointer; }
+
+.btn-main {
+  background-color: #269c85;
+  border: 1px solid #269c85;
   border-radius: 10px;
   color: #ffffff;
   cursor: pointer; }
-  button:hover {
-    background-color: #0e5c4c;
-    border: 1px solid #0e5c4c; }
+  .btn-main:hover {
+    background-color: #228b76;
+    border: 1px solid #228b76; }
+
+.btn-reset {
+  background-color: #cccccc;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  color: #333333;
+  cursor: pointer; }
+  .btn-reset:hover {
+    background-color: #afafaf;
+    border: 1px solid #afafaf; }
