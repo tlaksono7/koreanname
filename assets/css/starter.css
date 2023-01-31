@@ -7870,6 +7870,12 @@ body {
     font-size: 20px;
     font-weight: 600; }
 
+.footer {
+  padding: 20px;
+  text-align: right; }
+  .footer p {
+    color: #ffffff; }
+
 .btn {
   padding: 10px 20px;
   border-radius: 10px;
