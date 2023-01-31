@@ -1,12 +1,19 @@
-let generateEl = document.querySelector("#generate")
-let resetEl = document.querySelector("#reset")
-let resultSecEl = document.querySelector(".result-section")
-let resultEl = document.querySelector("#result")
-let headerResultEl = document.querySelector("#result-header")
+// Form Variable
 let valueDate = document.querySelector("#date")
 let valueMonth = document.querySelector("#month")
 let sexMale = document.querySelector("#male")
 let sexFemale = document.querySelector("#female")
+
+// Button Element Variable
+let generateEl = document.querySelector("#generate")
+let resetEl = document.querySelector("#reset")
+
+// Result Section Variable
+let resultSecEl = document.querySelector(".result-section")
+let resultEl = document.querySelector("#result")
+let headerResultEl = document.querySelector("#result-header")
+let loaderEl = document.querySelector("#loader") 
+
 
 let objName = ""
 let firstName = ""
@@ -95,17 +102,18 @@ const month = {
     12: "Oh"
 };
 
-
+// User must select gender
 const validateSex = function() {
     if (sexMale.checked) {
         objName = dateMale;
     } else if (sexFemale.checked){
         objName = dateFemale;
     } else {
-        alert("Please select your sex")
+        alert("Please select your gender!")
     }
 }
 
+// Generate First name
 const getFirstName = function() {
     for (let i = 0; i < Object.keys(objName).length; i++) {
         if (valueDate.value == i) {
@@ -114,6 +122,7 @@ const getFirstName = function() {
     } 
 }
 
+// Generate Last name
 const getLastName = function() {
     for (let i = 0; i < Object.keys(month).length; i++) {
         if (valueMonth.value == i) {
@@ -122,20 +131,38 @@ const getLastName = function() {
     }
 }
 
+// Reset Button function, it will reload the page and reset the entry form
 resetEl.addEventListener("click", function() {
     window.location.href=window.location.href
 });
 
+
+// Call getFirstName and getLastname
+const generateAll = function() {
+    getFirstName()
+    getLastName()
+    // Combine getFirstName and getLastName, appended to result section
+    resultEl.textContent = "✨ "+lastName+ " "+firstName+" ✨"
+    loaderEl.classList.remove("open")
+
+}
+
+
+// When Generate Button was click, this function will run.
 generateEl.addEventListener("click", function() {
-    validateSex()
-    if (objName) {
-        getFirstName()
-        getLastName()
-        resultSecEl.classList.add("open")
-        headerResultEl.textContent = "Your Korean name is:"
-        resultEl.textContent = "✨ "+lastName+ " "+firstName+" ✨"
-    } else {
-        return
-    }
-   
+        // Check if user select a gender
+        validateSex()
+        if (objName) {
+            // If yes, result section and loading icon will be show
+            resultEl.textContent = ""
+            resultSecEl.classList.add("open")
+            loaderEl.classList.add("open")
+            headerResultEl.textContent = "Your Korean name is:"
+            // After 3 second, generateAll will be called and return the final result.
+            setTimeout(generateAll, 3000)
+        } else {
+            // If no, the function will be stop..
+            return
+        }
 });
+
