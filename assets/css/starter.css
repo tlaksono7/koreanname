@@ -7871,7 +7871,7 @@ body {
     font-weight: 600; }
 
 .footer {
-  padding: 20px;
+  padding: 0 20px;
   text-align: right; }
   .footer p {
     color: #ffffff; }
