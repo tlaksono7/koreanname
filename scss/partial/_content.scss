@@ -1,0 +1,70 @@
+.content {
+    margin-top: 50px;
+    background-color: $white-color;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sex {
+    margin: 20px 0;
+    .radio-toolbar {
+        display: flex;
+        margin-top: 10px;
+    }
+    .radio-toolbar input[type="radio"] {
+        display: none;
+    }
+    .radio-toolbar label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 10px;
+        font-family: Arial;
+        font-size: 16px;
+        margin-right: 10px;
+        cursor: pointer;
+        i {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .radio-toolbar label.male {
+        border: 2px solid $blue-color;
+    }
+    .radio-toolbar label.female {
+        border: 2px solid $pink-color;
+    }
+
+    .radio-toolbar input[type="radio"]:checked+ .male {
+        background-color: $blue-color;
+    }
+
+    .radio-toolbar input[type="radio"]:checked+ .female {
+        background-color: $pink-color;
+    }
+}
+
+.birthday {
+    margin: 20px 0;
+    .birthday-wrapper {
+        margin-top: 10px;
+    }
+    select {
+        background-color: $white-color;
+        padding: 10px 20px;
+        border: 1px solid $light-white-color;
+        border-radius: 10px;
+    }
+}
+
+
+#result {
+    margin: 20px 0;
+    padding: 20px;
+    background-color:#b1fde4;
+    border-radius: 10px;
+}
