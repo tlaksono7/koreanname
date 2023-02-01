@@ -7794,6 +7794,8 @@ body {
 .header {
   margin-bottom: 40px;
   color: #ffffff; }
+  .header h2 {
+    font-weight: 600; }
 
 .sex {
   background-color: #269c85;
