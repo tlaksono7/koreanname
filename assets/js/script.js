@@ -102,7 +102,7 @@ const month = {
     12: "Oh"
 };
 
-// User must select gender
+// User must select gender to define which object (dateMale and dateFemale) we call later
 const validateSex = function() {
     if (sexMale.checked) {
         objName = dateMale;
