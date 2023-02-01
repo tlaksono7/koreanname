@@ -33,6 +33,6 @@ MIT
 
 ---
 
-> [tlaksono.my.id](https://www.amitmerchant.com) &nbsp;&middot;&nbsp;
+> [tlaksono.my.id](https://tlaksono.my.id) &nbsp;&middot;&nbsp;
 > GitHub [@tlaksono7](https://github.com/tlaksono7) &nbsp;&middot;&nbsp;
 > Twitter [@_titolaksono](https://twitter.com/_titolaksono)
