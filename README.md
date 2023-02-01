@@ -20,6 +20,10 @@ $ npm install
 $ npm start
 ```
 
+## Demo
+
+Here is a working live demo: https://koreannamegenerator.vercel.app/
+
 ## Credits
 
 - [Creatrip](https://www.creatrip.com/en/news/8220/)
